@@ -1,0 +1,46 @@
+.dashboard__layout {
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .dashboard__layout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+.dashboard__nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: transparent;
+  border: 2px solid transparent;
+  color: var(--color-black);
+  font-family: var(--font-headings);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dashboard__nav-btn:hover {
+  background: var(--color-gray-100);
+}
+
+.dashboard__nav-btn.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.dashboard__item {
+  padding: var(--spacing-md);
+}
+
+.dashboard__item.card:hover {
+  transform: none; /* Disable hover float for dashboard items */
+  box-shadow: 4px 4px 0px 0px var(--color-black);
+}
